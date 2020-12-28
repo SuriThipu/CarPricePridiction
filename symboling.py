@@ -1,13 +1,6 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+import Header as m
 
-from matplotlib.pyplot import xticks
-
-df = pd.DataFrame(pd.read_csv("CarPrice_Assignment.csv"))
-
-plt1 = sns.countplot(df['symboling'])
-plt1.set(xlabel = 'Symbol', ylabel= 'Count of Cars')
-plt.show()
-plt.tight_layout()
+m.plt1 = m.sns.countplot(m.df['symboling'])
+m.plt1.set(xlabel = 'Symbol', ylabel= 'Count of Cars')
+m.plt.show()
+m.plt.tight_layout()

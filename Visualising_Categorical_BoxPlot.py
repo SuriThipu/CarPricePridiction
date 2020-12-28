@@ -1,30 +1,23 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+import Header as m
 
-from matplotlib.pyplot import xticks
-
-df = pd.DataFrame(pd.read_csv("CarPrice_Assignment.csv"))
-
-auto = df[['fueltype', 'aspiration', 'carbody', 'drivewheel', 'wheelbase', 'carlength', 'carwidth', 'curbweight', 'enginetype',
+auto = m.df[['fueltype', 'aspiration', 'carbody', 'drivewheel', 'wheelbase', 'carlength', 'carwidth', 'curbweight', 'enginetype',
        'cylindernumber', 'enginesize',  'boreratio', 'horsepower', 'price',  ]]
 
 
-plt.figure(figsize=(10, 20))
-plt.subplot(4,2,1)
-sns.boxplot(x = 'fueltype', y = 'price', data = auto)
-plt.subplot(4,2,2)
-sns.boxplot(x = 'aspiration', y = 'price', data = auto)
-plt.subplot(4,2,3)
-sns.boxplot(x = 'carbody', y = 'price', data = auto)
-plt.subplot(4,2,4)
-sns.boxplot(x = 'drivewheel', y = 'price', data = auto)
-plt.subplot(4,2,5)
-sns.boxplot(x = 'enginetype', y = 'price', data = auto)
-# plt.subplot(4,2,6)
-# sns.boxplot(x = 'brand_category', y = 'price', data = auto)
-plt.subplot(4,2,7)
-sns.boxplot(x = 'cylindernumber', y = 'price', data = auto)
-plt.tight_layout()
-plt.show()
+m.plt.figure(figsize=(10, 20))
+m.plt.subplot(4,2,1)
+m.sns.boxplot(x = 'fueltype', y = 'price', data = auto)
+m.plt.subplot(4,2,2)
+m.sns.boxplot(x = 'aspiration', y = 'price', data = auto)
+m.plt.subplot(4,2,3)
+m.sns.boxplot(x = 'carbody', y = 'price', data = auto)
+m.plt.subplot(4,2,4)
+m.sns.boxplot(x = 'drivewheel', y = 'price', data = auto)
+m.plt.subplot(4,2,5)
+m.sns.boxplot(x = 'enginetype', y = 'price', data = auto)
+# m.plt.subplot(4,2,6)
+# m.sns.boxplot(x = 'brand_category', y = 'price', data = auto)
+m.plt.subplot(4,2,7)
+m.sns.boxplot(x = 'cylindernumber', y = 'price', data = auto)
+m.plt.tight_layout()
+m.plt.show()

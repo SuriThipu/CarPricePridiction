@@ -1,14 +1,7 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-from matplotlib.pyplot import xticks
-
-df = pd.DataFrame(pd.read_csv("CarPrice_Assignment.csv"))
+import Header as m
 
 
-plt1 =  sns.scatterplot(x = 'horsepower', y = 'price', hue = 'fueltype', data = df)
-plt1.set_xlabel('Horsepower')
-plt1.set_ylabel('Price of Car (Dollars)')
-plt.show()
+m.plt1 =  m.sns.scatterplot(x = 'horsepower', y = 'price', hue = 'fueltype', data = m.df)
+m.plt1.set_xlabel('Horsepower')
+m.plt1.set_ylabel('Price of Car (Dollars)')
+m.plt.show()
