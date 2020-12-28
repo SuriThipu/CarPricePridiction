@@ -1,18 +1,11 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+import Header as m
 
-from matplotlib.pyplot import xticks
-
-df = pd.DataFrame(pd.read_csv("CarPrice_Assignment.csv"))
-
-df['brand'] = df.CarName.str.split(' ').str.get(0).str.upper()
+m.df['brand'] = m.df.CarName.str.split(' ').str.get(0).str.upper()
 
 
-df_comp_avg_price = df[['brand','price']].groupby("brand", as_index = False).mean().rename(columns={'price':'brand_avg_price'})
-plt1 = df_comp_avg_price.plot(x = 'brand', kind='bar',legend = False, sort_columns = True, figsize = (15,3))
-plt1.set_xlabel("Brand")
-plt1.set_ylabel("Avg Price (Dollars)")
-xticks(rotation = 90)
-plt.show()
+m.df_comp_avg_price = m.df[['brand','price']].groupby("brand", as_index = False).mean().rename(columns={'price':'brand_avg_price'})
+m.plt1 = m.df_comp_avg_price.plot(x = 'brand', kind='bar',legend = False, sort_columns = True, figsize = (15,3))
+m.plt1.set_xlabel("Brand")
+m.plt1.set_ylabel("Avg Price (Dollars)")
+m.xticks(rotation = 90)
+m.plt.show()
