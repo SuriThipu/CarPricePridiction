@@ -1,38 +1,30 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-from matplotlib.pyplot import xticks
-
-df = pd.DataFrame(pd.read_csv("CarPrice_Assignment.csv"))
+import Header as m
 
 
-
-fig, axs = plt.subplots(3,2,figsize=(20,20))
+fig, axs = m.plt.subplots(3,2,figsize=(20,20))
 #
-plt1 = sns.scatterplot(x = 'enginesize', y = 'price', data = df, ax = axs[0,0])
-plt1.set_xlabel('Size of Engine (Cubic Inches)')
-plt1.set_ylabel('Price of Car (Dollars)')
+m.plt1 = m.sns.scatterplot(x = 'enginesize', y = 'price', data = m.df, ax = axs[0,0])
+m.plt1.set_xlabel('Size of Engine (Cubic Inches)')
+m.plt1.set_ylabel('Price of Car (Dollars)')
 #
-plt2 = sns.scatterplot(x = 'boreratio', y = 'price', data = df, ax = axs[0,1])
-plt2.set_xlabel('Bore Ratio')
-plt2.set_ylabel('Price of Car (Dollars)')
+m.plt2 = m.sns.scatterplot(x = 'boreratio', y = 'price', data = m.df, ax = axs[0,1])
+m.plt2.set_xlabel('Bore Ratio')
+m.plt2.set_ylabel('Price of Car (Dollars)')
 #
-plt3 = sns.scatterplot(x = 'stroke', y = 'price', data = df, ax = axs[1,0])
-plt3.set_xlabel('Stroke')
-plt3.set_ylabel('Price of Car (Dollars)')
+m.plt3 = m.sns.scatterplot(x = 'stroke', y = 'price', data = m.df, ax = axs[1,0])
+m.plt3.set_xlabel('Stroke')
+m.plt3.set_ylabel('Price of Car (Dollars)')
 #
-plt4 = sns.scatterplot(x = 'compressionratio', y = 'price', data = df, ax = axs[1,1])
-plt4.set_xlabel('Compression Ratio')
-plt4.set_ylabel('Price of Car (Dollars)')
+m.plt4 = m.sns.scatterplot(x = 'compressionratio', y = 'price', data = m.df, ax = axs[1,1])
+m.plt4.set_xlabel('Compression Ratio')
+m.plt4.set_ylabel('Price of Car (Dollars)')
 #
-plt5 = sns.scatterplot(x = 'horsepower', y = 'price', data = df, ax = axs[2,0])
-plt5.set_xlabel('Horsepower')
-plt5.set_ylabel('Price of Car (Dollars)')
+m.plt5 = m.sns.scatterplot(x = 'horsepower', y = 'price', data = m.df, ax = axs[2,0])
+m.plt5.set_xlabel('Horsepower')
+m.plt5.set_ylabel('Price of Car (Dollars)')
 #
-plt5 = sns.scatterplot(x = 'peakrpm', y = 'price', data = df, ax = axs[2,1])
-plt5.set_xlabel('Peak RPM')
-plt5.set_ylabel('Price of Car (Dollars)')
-plt.tight_layout()
-plt.show()
+m.plt5 = m.sns.scatterplot(x = 'peakrpm', y = 'price', data = m.df, ax = axs[2,1])
+m.plt5.set_xlabel('Peak RPM')
+m.plt5.set_ylabel('Price of Car (Dollars)')
+m.plt.tight_layout()
+m.plt.show()
