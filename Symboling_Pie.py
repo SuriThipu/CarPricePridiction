@@ -1,15 +1,8 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+import Header as m
 
-from matplotlib.pyplot import xticks
-
-df = pd.DataFrame(pd.read_csv("CarPrice_Assignment.csv"))
-
-df_sym = pd.DataFrame(df['symboling'].value_counts())
-df_sym.plot.pie(subplots=True,labels = df_sym.index.values, autopct='%1.1f%%', figsize = (15,7.5))
+m.df_sym = m.pd.DataFrame(m.df['symboling'].value_counts())
+m.df_sym.plot.pie(subplots=True,labels = m.df_sym.index.values, autopct='%1.1f%%', figsize = (15,7.5))
 # Unsquish the pie.
-plt.gca().set_aspect('equal')
-plt.show()
-plt.tight_layout()
+m.plt.gca().set_aspect('equal')
+m.plt.show()
+m.plt.tight_layout()
